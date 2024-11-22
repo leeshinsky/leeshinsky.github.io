@@ -75,6 +75,17 @@
 			turn it around! 
 			*/
 			function update() {
+		        /* your code to increse poditionx by 10 here*/
+				positionX = posion + speed 
+				changeBoxText(positionX)
+				if(positionX > boardWidt){
+					speed = -speed;
+				
+				}
+				if (positionX < 0){
+					speed = -speed * -1
+				}
+
 
 
 			};
@@ -85,6 +96,14 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0;
+				points = points + 1;
+				changeBoxText(points)
+				if(speed > 0){
+					speed = speed + 3
+				}else if (speed < 0){
+					speed = speed - 3
+				}
 
 
 			};
